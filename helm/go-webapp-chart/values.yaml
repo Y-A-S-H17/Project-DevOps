@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: lastpush/go-webapp
   pullPolicy: IfNotPresent
-  tag: "15209165302"
+  tag: "15212243944"
 
 # ingress:
 #   enabled: false
