@@ -32,11 +32,16 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.22'  
 
-    - name: Run golangci-lint
+    - name: Install golangci-lint
       uses: golangci/golangci-lint-action@v6
       with:
-        version: v1.56.2
+        version: v1.56.2  # or latest stable
+        args: --timeout=5m
   push:
     runs-on: ubuntu-latest
 
